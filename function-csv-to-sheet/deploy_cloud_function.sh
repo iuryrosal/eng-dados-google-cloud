@@ -1,0 +1,11 @@
+gcloud functions deploy transfer_csvs_to_sheets \
+    --runtime=python310 \
+    --trigger-bucket=csvs_to_sheets \
+    --region=southamerica-east1 \
+    --source=function_csv_to_sheet \
+    --entry-point=transfer_csv_to_sheets \
+    --service-account=apoena-csv-sheet@fourth-eon-422319-v6.iam.gserviceaccount.com \
+    --timeout=60s \
+    --memory=512MB \
+    --max-instances=10 \
+    --env-vars-file env.yaml

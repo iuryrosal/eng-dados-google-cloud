@@ -1,0 +1,3 @@
+gspread>=6.1.0
+duckdb
+oauth2client>=4.1.3

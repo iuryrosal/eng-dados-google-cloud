@@ -1,0 +1,12 @@
+gcloud functions deploy ingest_exchange_rates \
+    --no-gen2 \
+    --trigger-http \
+    --runtime=python310 \
+    --region=southamerica-east1 \
+    --source=function_to_ingest_data \
+    --entry-point=collect_data \
+    --service-account=currency-converter-collection@fourth-eon-422319-v6.iam.gserviceaccount.com \
+    --timeout=60s \
+    --memory=512MB \
+    --max-instances=10 \
+    --env-vars-file=env.yaml

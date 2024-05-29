@@ -8,6 +8,7 @@ EXPOSE 8080
 WORKDIR /app
 
 COPY main.py /app/
+COPY src/cloud_storage.py /app/src/
 
 ENV PORT 8080
 

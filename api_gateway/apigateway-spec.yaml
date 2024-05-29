@@ -1,0 +1,33 @@
+swagger: '2.0'
+info:
+  title: Protected API with a Service Account
+  description: Protected API with a Service Account
+  version: v2
+schemes:
+  - https
+produces:
+  - application/json
+
+x-google-backend:
+  address: "https://cloudrun-api-backend-3zghgl6jxq-uc.a.run.app"
+  deadline: 60.0
+
+securityDefinitions:
+  google_service_account:
+    autorizationUrl: ""
+    flow: "implicit"
+    type: "oauth2"
+    x-google-issuer: "https://securetoken.google.com/fourth-eon-422319-v6"
+    x-google-jwks_uri: "https://www.googleapis.com/service_accounts/v1/metadata/x509/api-apoenastack@fourth-eon-422319-v6.iam.gserviceaccount.com"
+    x-google-audiences: "fourth-eon-422319-v6"
+
+paths:
+  /:
+    get:
+      description: Return OK for tests
+      operationId: test_api
+      responses:
+        200:
+          description: "OK"
+        security:
+          - google_service_account: []

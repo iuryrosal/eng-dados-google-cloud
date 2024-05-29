@@ -1,0 +1,5 @@
+gunicorn==20.1.0
+Flask-Cors==3.0.10
+Flask-SSLify==0.1.5
+Flask==2.2.5
+webargs==8.2.0

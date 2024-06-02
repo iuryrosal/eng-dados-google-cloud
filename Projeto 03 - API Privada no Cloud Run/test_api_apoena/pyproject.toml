@@ -12,6 +12,7 @@ google-crc32c = "^1.5.0"
 requests = "^2.32.3"
 google-cloud-secret-manager = "^2.20.0"
 python-dotenv = "^1.0.1"
+pyjwt = "^2.8.0"
 
 
 [build-system]

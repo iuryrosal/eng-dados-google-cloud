@@ -1,13 +1,14 @@
 [tool.poetry]
-name = "function-csv-to-sheet"
+name = "interact-with-gcs"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["iuryrosal <iuryrosal@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-gspread = "^6.1.0"
+google-cloud-storage = "^2.16.0"
+duckdb = "^0.10.2"
 
 
 [build-system]

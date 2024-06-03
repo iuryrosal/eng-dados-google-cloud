@@ -1,5 +1,5 @@
 steps:
 - name: "grc.io/cloud-builders/docker"
-  args: ["build", "-t", "grc.io/$PROJECT_ID/api-apoena-stack"]
+  args: ["build", "-t", "grc.io/$PROJECT_ID/api-apoena-backend"]
 images:
-  - "grc.io/$PROJECT_ID/api-apoena-stack"
+  - "grc.io/$PROJECT_ID/api-apoena-backend"
